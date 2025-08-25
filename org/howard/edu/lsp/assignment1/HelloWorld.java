@@ -1,5 +1,5 @@
 /**
- * Thane Douglass: Coding partner
+ * Thane Douglass: HelloWorld.java
  * This class is a simple program that prints "Hello World!!" to the console.
  */
 package org.howard.edu.lsp.assignment1;
