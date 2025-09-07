@@ -21,21 +21,28 @@ java -cp src org.howard.edu.lsp.assignment2.ETLPipeline
 7. Malformed rows should be skipped but processing should continue
 
 **Design Notes**
-→ Extraction: Reads data from CSV using BufferedReader, skipping header and empty lines
++ **Extraction:** Reads data from products.csv using a BufferedReader, skipping the header and any empty lines.
++ **Transformation:**
+  + Converts product names to uppercase.
+  + Applies a 10% discount to Electronics products.
+  + Recategorizes high-value electronics (priced over $500.00 after discount) as Premium Electronics.
+  + Calculates and adds a new PriceRange field based on final price.
++ **Loading:** Writes the transformed data to transformed_products.csv with a new PriceRange column.
++ **Precision:** Uses BigDecimal with RoundingMode.HALF_UP for accurate monetary calculations and rounding.
++ **Error Handling**: Gracefully handles a missing input file and skips any malformed data rows.
 
-→ Transformation: Converts product names to uppercase, Applies 10% discount to Electronics category products, Recategorizes high-value Electronics (>$500) as "Premium Electronics", Adds PriceRange field based on price thresholds
+**Testing Strategy**
+The program was tested with two primary cases to ensure robustness and correctness.
 
-→ Loading: Writes transformed data to output CSV with additional PriceRange column
+**Normal Input:** A standard products.csv file with a mix of product data was used to verify that all transformations (name conversion, discount, recategorization, and price range calculation) were applied correctly. The output was validated against a golden file to ensure accuracy.
 
-→ Error Handling: Gracefully handles malformed data, continues processing other rows
+**Edge Cases:**
 
-→ Precision: Uses BigDecimal for precise monetary calculations with HALF_UP rounding
++ **Empty Input File*: The program was tested with a products.csv file that contained only the header row to ensure it gracefully handles this scenario by producing a new file with only the header row.
 
-**Price Range Categories**
-Low: $0.00 - $10.00
-Medium: $10.01 - $100.00
-High: $100.01 - $500.00
-Premium: $500.01 and above
++ **File Not Found*: The program was tested without the products.csv file present to confirm it handles missing input gracefully and provides a clear error message.
+
++ **Malformed Rows*: Malformed rows (e.g., missing columns or invalid number formats) were added to the input file to ensure they are skipped and do not cause the program to crash.
 
 # Documentation of External Internet Sources
 **Link:** https://www.google.com/search?q=https://www.baeldung.com/java-bigdecimal-round-half-up
