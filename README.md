@@ -31,18 +31,18 @@ java -cp src org.howard.edu.lsp.assignment2.ETLPipeline
 + **Precision:** Uses BigDecimal with RoundingMode.HALF_UP for accurate monetary calculations and rounding.
 + **Error Handling**: Gracefully handles a missing input file and skips any malformed data rows.
 
-**Testing Strategy**
+### **Testing Strategy**
 The program was tested with two primary cases to ensure robustness and correctness.
 
 **Normal Input:** A standard products.csv file with a mix of product data was used to verify that all transformations (name conversion, discount, recategorization, and price range calculation) were applied correctly. The output was validated against a golden file to ensure accuracy.
 
 **Edge Cases:**
 
-+ **Empty Input File*: The program was tested with a products.csv file that contained only the header row to ensure it gracefully handles this scenario by producing a new file with only the header row.
++ *Empty Input File*: The program was tested with a products.csv file that contained only the header row to ensure it gracefully handles this scenario by producing a new file with only the header row.
 
-+ **File Not Found*: The program was tested without the products.csv file present to confirm it handles missing input gracefully and provides a clear error message.
++ *File Not Found*: The program was tested without the products.csv file present to confirm it handles missing input gracefully and provides a clear error message.
 
-+ **Malformed Rows*: Malformed rows (e.g., missing columns or invalid number formats) were added to the input file to ensure they are skipped and do not cause the program to crash.
++ *Malformed Rows*: Malformed rows (e.g., missing columns or invalid number formats) were added to the input file to ensure they are skipped and do not cause the program to crash.
 
 # Documentation of External Internet Sources
 **Link:** https://www.google.com/search?q=https://www.baeldung.com/java-bigdecimal-round-half-up
