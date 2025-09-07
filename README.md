@@ -23,7 +23,7 @@ Medium: $10.01 - $100.00
 High: $100.01 - $500.00
 Premium: $500.01 and above
 
-**Documentation of External Internet Sources**
+# Documentation of External Internet Sources
 **Link:** https://www.google.com/search?q=https://www.baeldung.com/java-bigdecimal-round-half-up
 **Usage:** Borrowed the use of BigDecimal with RoundingMode.HALF_UP to ensure accurate and reliable rounding of floating-point numbers for monetary values, avoiding precision issues inherent with double or float.
 
@@ -35,3 +35,8 @@ Usage: Used BigDecimal class for precise decimal arithmetic operations, specific
 
 **Link:** https://docs.oracle.com/javase/8/docs/api/java/io/BufferedReader.html
 Usage: Implemented BufferedReader for efficient reading of the input CSV file, handling large files with optimal performance through buffered input operations.
+
+# Documentation of AI Usage
+**Initial Problem:** After successfully compiling the ETLPipeline.java program, I encountered a ClassNotFoundException when trying to run it from the command line.
+**AI’s Response Excerpt:** The AI's response explained that the error was a result of running the program from the wrong directory. It instructed me to navigate to the project's root directory and execute the java command using the program's fully qualified name, including its package structure.
+**Modification and Usage:** I followed the AI's guidance, navigating to the project root and running the command java org.howard.edu.lsp.assignment2.ETLPipeline. The program then executed successfully, resolving the ClassNotFoundException and demonstrating the importance of running Java commands from the project root directory.
