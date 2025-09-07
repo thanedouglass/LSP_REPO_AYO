@@ -52,5 +52,9 @@ Usage: Implemented BufferedReader for efficient reading of the input CSV file, h
 
 # Documentation of AI Usage
 **Initial Problem:**  After successfully compiling the ETLPipeline.java program, I encountered a ClassNotFoundException when trying to run it from the command line. My initial attempts with different command flags (-d ., -d bin) resulted in the program creating a whole new org/ folder at the project root, which was not the intended behavior.
+
+**My Prompt:**  i need the compiler to place the compiled output in the assignment2 folder src/org/howard/edu/lsp/assignment2/
+
 **AI’s Response Excerpt:** The AI's response explained that to get the compiled .class file to be in the same directory as the .java file, I needed to change my current working directory to the assignment2 folder and run a simple javac command without any destination flags.
+
 **Modification and Usage:** I learned to manage my directory context before compiling. By running cd src/org/howard/edu/lsp/assignment2/ and then javac ETLPipeline.java, the .class file was correctly placed within the assignment2 directory. I then returned to the project root and used the java -cp src ... command, which correctly told the JVM to find the compiled code within the src directory. This process resolved the original error and taught me a crucial lesson about the relationship between javac, java, and the project's file structure.
