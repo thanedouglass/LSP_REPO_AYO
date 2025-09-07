@@ -2,7 +2,7 @@ package org.howard.edu.lsp.assignment2;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.math.BigDecimal:
+import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
