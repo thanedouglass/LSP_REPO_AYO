@@ -12,9 +12,13 @@ This Java program implements an ETL (Extract, Transform, Load) pipeline that pro
 
 **Design Notes**
 → Extraction: Reads data from CSV using BufferedReader, skipping header and empty lines
+
 → Transformation: Converts product names to uppercase, Applies 10% discount to Electronics category products, Recategorizes high-value Electronics (>$500) as "Premium Electronics", Adds PriceRange field based on price thresholds
+
 → Loading: Writes transformed data to output CSV with additional PriceRange column
+
 → Error Handling: Gracefully handles malformed data, continues processing other rows
+
 → Precision: Uses BigDecimal for precise monetary calculations with HALF_UP rounding
 
 **Price Range Categories**
