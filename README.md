@@ -1,6 +1,16 @@
 # ETL Pipeline for Product Data
 This Java program implements an ETL (Extract, Transform, Load) pipeline that processes product data from a CSV file, applies various transformations, and outputs the transformed data to a new CSV file.
 
+**How To Run**
+1. Compile the Java program:
+```java
+javac src/org/howard/edu/lsp/assignment2/ETLPipeline.java
+```
+2. Run the compiled program:
+```java
+java -cp src org.howard.edu.lsp.assignment2.ETLPipeline
+```
+
 **Assumptions**
 1. Input file (data/products.csv) exists in the specified location relative to the project root
 2. Input CSV format follows: ProductID, Name, Price, Category
@@ -41,6 +51,6 @@ Usage: Used BigDecimal class for precise decimal arithmetic operations, specific
 Usage: Implemented BufferedReader for efficient reading of the input CSV file, handling large files with optimal performance through buffered input operations.
 
 # Documentation of AI Usage
-**Initial Problem:** After successfully compiling the ETLPipeline.java program, I encountered a ClassNotFoundException when trying to run it from the command line.
-**AI’s Response Excerpt:** The AI's response explained that the error was a result of running the program from the wrong directory. It instructed me to navigate to the project's root directory and execute the java command using the program's fully qualified name, including its package structure.
-**Modification and Usage:** I followed the AI's guidance, navigating to the project root and running the command java org.howard.edu.lsp.assignment2.ETLPipeline. The program then executed successfully, resolving the ClassNotFoundException and demonstrating the importance of running Java commands from the project root directory.
+**Initial Problem:**  After successfully compiling the ETLPipeline.java program, I encountered a ClassNotFoundException when trying to run it from the command line. My initial attempts with different command flags (-d ., -d bin) resulted in the program creating a whole new org/ folder at the project root, which was not the intended behavior.
+**AI’s Response Excerpt:** The AI's response explained that to get the compiled .class file to be in the same directory as the .java file, I needed to change my current working directory to the assignment2 folder and run a simple javac command without any destination flags.
+**Modification and Usage:** I learned to manage my directory context before compiling. By running cd src/org/howard/edu/lsp/assignment2/ and then javac ETLPipeline.java, the .class file was correctly placed within the assignment2 directory. I then returned to the project root and used the java -cp src ... command, which correctly told the JVM to find the compiled code within the src directory. This process resolved the original error and taught me a crucial lesson about the relationship between javac, java, and the project's file structure.
