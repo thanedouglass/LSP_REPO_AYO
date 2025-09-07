@@ -46,16 +46,20 @@ The program was tested with two primary cases to ensure robustness and correctne
 
 # Documentation of External Internet Sources
 **Link:** https://www.google.com/search?q=https://www.baeldung.com/java-bigdecimal-round-half-up
+
 **Usage:** Borrowed the use of BigDecimal with RoundingMode.HALF_UP to ensure accurate and reliable rounding of floating-point numbers for monetary values, avoiding precision issues inherent with double or float.
 
 **Link:** https://www.google.com/search?q=https://docs.oracle.com/javase/tutorial/essential/io/trywithresources.html
+
 **Usage:** The try-with-resources statement is used to automatically manage the BufferedReader and BufferedWriter streams. This common Java practice ensures that resources are closed properly, preventing potential memory leaks and file corruption
 
 **Link:** https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html
-Usage: Used BigDecimal class for precise decimal arithmetic operations, specifically for price calculations and discount applications to avoid floating-point precision errors common with primitive types.
+
+**Usage:** Used BigDecimal class for precise decimal arithmetic operations, specifically for price calculations and discount applications to avoid floating-point precision errors common with primitive types.
 
 **Link:** https://docs.oracle.com/javase/8/docs/api/java/io/BufferedReader.html
-Usage: Implemented BufferedReader for efficient reading of the input CSV file, handling large files with optimal performance through buffered input operations.
+
+**Usage:** Implemented BufferedReader for efficient reading of the input CSV file, handling large files with optimal performance through buffered input operations.
 
 # Documentation of AI Usage
 **Initial Problem:**  After successfully compiling the ETLPipeline.java program, I encountered a ClassNotFoundException when trying to run it from the command line. My initial attempts with different command flags (-d ., -d bin) resulted in the program creating a whole new org/ folder at the project root, which was not the intended behavior.
