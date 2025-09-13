@@ -12,3 +12,22 @@ Follow Up Prompt:
 
 AI Response:
 "That's an excellent plan for your Assignment 3. The new framework I provided is a great starting point for this redesign and aligns perfectly with the requirements you've outlined. To answer your question directly: yes, this new framework complies with all the requirements for Assignment 3. It's a significant improvement over the single-class implementation from Assignment 2."
+
+####Debugging and Troubleshooting
+This section summarizes the additional work required to resolve compilation and version control issues. After generating the initial code, the AI assistant provided guidance to debug two key problems:
+Prompt:
+"i just commited my changed with the new java and reflections files then when i went to sync it gave me this output - * branch            main       -> FETCH_HEAD
+   79b275d..687529f  main       -> origin/main
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can do so by running one of the following commands sometime before
+hint: your next pull:
+hint:
+hint:   git config pull.rebase false  # merge
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only"
+
+Prompt: Error: Could not find or load main class org.howard.edu.lsp.assignment3.ETLPipeline
+Caused by: java.lang.NoClassDefFoundError: org/howard/edu/lsp/assignment3/ETLPipeline (wrong name: org/howard/edu/lsp/assignment2/ETLPipeline)
+
+*Java Package Error: The program failed to run due to a NoClassDefFoundError. The AI assistant accurately identified the problem as a mismatch between the file's directory path (assignment3) and its internal package declaration (assignment2). The assistant provided the corrected code with the proper package name, which resolved the issue.
+*Git Syncing Error: The git pull command failed, stating that the local and remote branches had "diverged." The assistant explained this concept and provided the precise command (git pull --no-rebase) needed to merge the divergent branches and successfully sync the repository.
