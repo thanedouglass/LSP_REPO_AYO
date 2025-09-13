@@ -1,4 +1,4 @@
-#Assignment 3: AI Prompts and Transcript
+# Assignment 3: AI Prompts and Transcript
 
 This document contains a summary of the prompts and excerpts from the generative AI assistant's responses used for Assignment 3.
 
@@ -14,7 +14,7 @@ Follow Up Prompt:
 AI Response:
 "That's an excellent plan for your Assignment 3. The new framework I provided is a great starting point for this redesign and aligns perfectly with the requirements you've outlined. To answer your question directly: yes, this new framework complies with all the requirements for Assignment 3. It's a significant improvement over the single-class implementation from Assignment 2."
 
-####Debugging and Troubleshooting
+#### Debugging and Troubleshooting
 This section summarizes the additional work required to resolve compilation and version control issues. After generating the initial code, the AI assistant provided guidance to debug two key problems:
 Prompt:
 "i just commited my changed with the new java and reflections files then when i went to sync it gave me this output - * branch            main       -> FETCH_HEAD
