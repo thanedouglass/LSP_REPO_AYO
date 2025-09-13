@@ -15,7 +15,10 @@ ETLPipeline: The main class that orchestrates the entire process, tying the othe
 
 This refactoring adheres to the Single Responsibility Principle, making it much easier to test and modify each part independently.
 
-# How the New Design Meets the Requirements
+# Assignment 2 vs. Assignment 3 Comparative Analysis
+The most significant difference between Assignment 2 and Assignment 3 is the shift from a monolithic, procedural design to a modular, object-oriented design. While both programs produce the same output and fulfill all the project requirements, they do so with fundamentally different architectural approaches. Encapsulation improves clarity and specificity by creating a well-defined boundary around an object's data and the methods that operate on that data. This protects the object's integrity and simplifies the way other parts of the program interact with it. In the context of the Product class, In Assignment 2, a piece of code somewhere else in the program could have directly changed the price of a product to a negative number or a non-numeric value, potentially causing errors down the line. With encapsulation, any change to a Product object's state must go through a public method, which can include validation logic to ensure the new value is valid. This makes the code more robust and predictable. The three biggests improvements I see between Assignment 2 and Assignment 3 include the prevention of accidental data manipulation, the reduction of internal code complexity, and more robust code readability.
+
+## How the New Design Meets the Requirements
 
 ##### Object-Oriented Decomposition:
 The core of the redesign is breaking the problem into distinct classes (Product, CSVReader, ProductTransformer, CSVWriter, ETLPipeline), each with a single, clear responsibility. This directly addresses the main goal of the assignment.
@@ -28,6 +31,3 @@ The Product class encapsulates the data (its attributes are private) and provide
 
 ##### Code Style & Documentation: 
 Each class and public method now includes Javadoc comments, which are essential for good documentation. The code is also organized into a package, org.howard.edu.lsp.assignment3, as required.
-
-# Assignment 2 vs. Assignment 3 Comparative Analysis
-The most significant difference between Assignment 2 and Assignment 3 is the shift from a monolithic, procedural design to a modular, object-oriented design. While both programs produce the same output and fulfill all the project requirements, they do so with fundamentally different architectural approaches. Encapsulation improves clarity and specificity by creating a well-defined boundary around an object's data and the methods that operate on that data. This protects the object's integrity and simplifies the way other parts of the program interact with it. In the context of the Product class, In Assignment 2, a piece of code somewhere else in the program could have directly changed the price of a product to a negative number or a non-numeric value, potentially causing errors down the line. With encapsulation, any change to a Product object's state must go through a public method, which can include validation logic to ensure the new value is valid. This makes the code more robust and predictable. The three biggests improvements I see between Assignment 2 and Assignment 3 include the prevention of accidental data manipulation, the reduction of internal code complexity, and more robust code readability.
