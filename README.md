@@ -1,14 +1,14 @@
-# ETL Pipeline for Product Data
-This Java program implements an ETL (Extract, Transform, Load) pipeline that processes product data from a CSV file, applies various transformations, and outputs the transformed data to a new CSV file.
+# Object-Oriented Redesign of ETL Pipeline
+This Java program implements a redesign of my previous ETL (Extract, Transform, Load) pipeline that processes product data from a CSV file, applies various transformations, and outputs the transformed data to a new CSV file.
 
 **How To Run**
 1. Compile the Java program:
 ```java
-javac src/org/howard/edu/lsp/assignment2/ETLPipeline.java
+javac src/org/howard/edu/lsp/assignment3/*.java
 ```
 2. Run the compiled program:
 ```java
-java -cp src org.howard.edu.lsp.assignment2.ETLPipeline
+java -cp src org.howard.edu.lsp.assignment3.ETLPipeline
 ```
 
 **Assumptions**
