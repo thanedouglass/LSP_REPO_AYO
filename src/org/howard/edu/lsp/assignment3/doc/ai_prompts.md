@@ -1,4 +1,4 @@
-#Assignment 3: AI Prompts and Transcript
+#Assignment 3: AI Prompts and Transcript#
 This document contains a summary of the prompts and excerpts from the generative AI assistant's responses used for Assignment 3.
 
 Initial Prompt:
