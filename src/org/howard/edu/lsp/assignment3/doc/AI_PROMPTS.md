@@ -16,6 +16,7 @@ AI Response:
 
 #### Debugging and Troubleshooting
 This section summarizes the additional work required to resolve compilation and version control issues. After generating the initial code, the AI assistant provided guidance to debug two key problems:
+
 Prompt:
 "i just commited my changed with the new java and reflections files then when i went to sync it gave me this output - * branch            main       -> FETCH_HEAD
    79b275d..687529f  main       -> origin/main
