@@ -1,0 +1,62 @@
+Reference Transcript for Question 4: Smart-Campus Device System
+
+This document contains a transcript of the user's questions and the provided answers regarding the Java file structure and implementation correctness for the smart-campus device system.
+
+Topic 1: Implementation Correctness
+
+User Question:
+
+"do the two above classes correctly extend the following [abstract Device class and interface specifications]?"
+
+Gemini Response:
+
+Yes, the DoorLock, Thermostat, and Camera classes I provided correctly extend the abstract Device class and implement the Networked and BatteryPowered interfaces according to all the rules you've outlined.
+
+Here is a point-by-point confirmation:
+
+Inheritance: Each concrete class correctly uses the syntax extends Device (e.g., public class DoorLock extends Device...).
+
+Constructor Chain: The first line in the constructor of DoorLock, Thermostat, and Camera is super(id, location);, which correctly calls the constructor of the Device base class.
+
+Interface Implementation:
+
+DoorLock and Camera correctly state that they implements Networked, BatteryPowered.
+
+Thermostat correctly states that it implements Networked.
+
+Method Overriding: All required methods from the interfaces (connect, disconnect, etc.) and the abstract base class (getStatus) are properly implemented with the @Override annotation in each respective class.
+
+Behavior Adherence: The logic inside the implemented methods strictly follows the behavior specified in the instructions. For example, setBatteryPercent correctly throws an IllegalArgumentException for out-of-range values, and the connect/disconnect methods properly use the setConnected protected method from the Device class.
+
+In summary, the implementation adheres to all the specified requirements for inheritance and interface implementation.
+
+Topic 2: Repository File Structure
+
+User Question:
+
+"in my repo under question 4 there should only be 2 java scripts?"
+
+Gemini Response:
+
+No, for question 4 you will need a total of seven .java files in your repository under the org/howard/edu/lsp/midterm/question4/ directory.
+
+Here is the complete list of files required to build the smart-campus device system as specified:
+
+Device.java (The abstract base class)
+
+Networked.java (The interface for network capabilities)
+
+BatteryPowered.java (The interface for battery capabilities)
+
+DoorLock.java (A concrete device class)
+
+Thermostat.java (A concrete device class)
+
+Camera.java (A concrete device class)
+
+Main.java (The provided driver class to run and test the system)
+
+Verify Your Directory Structure
+Before running any commands, make sure all seven .java files (Device.java, Networked.java, BatteryPowered.java, DoorLock.java, Thermostat.java, Camera.java, and Main.java) are located inside the correct folder structure that matches the package name.
+
+Starting from your project's source root (e.g., a folder named src),

@@ -1,0 +1,96 @@
+Transcript for AreaCalculator Correction
+
+Here is a summary of the debugging session for the AreaCalculator class.
+
+User Input / Error Message:
+
+The user attempted to compile the Java files and received the following error:
+
+@thanedouglass ➜ /workspaces/LSP_REPO_AYO/src (main) $ javac org/howard/edu/lsp/midterm/question2/Main.java
+./org/howard/edu/lsp/midterm/question2/AreaCalculator.java:3: error: class, interface, or enum expected
+ublic class AreaCalculator {
+^
+1 error
+
+
+Analysis and Fix:
+
+You've found a classic typo! That's an excellent job of spotting the error message and providing it.
+
+The error message class, interface, or enum expected on the line ublic class AreaCalculator { points directly to the problem.
+
+The Cause of the Error: The compiler is telling you that it was expecting to see a keyword like public, class, interface, etc., but instead, it saw ublic. The letter 'p' is missing from the public keyword in your AreaCalculator.java file.
+
+The Fix: This is a very simple fix. You just need to add the 'p' back to the beginning of the line.
+
+Next Steps: Replace the content of your AreaCalculator.java with the corrected code below. Then, run the same javac and java commands again from your project's root directory (src).
+
+Final Corrected Code: AreaCalculator.java
+
+package org.howard.edu.lsp.midterm.question2;
+
+/**
+ * A utility class to calculate the area of various geometric shapes.
+ * All methods are static and overloaded.
+ */
+public class AreaCalculator {
+
+    /**
+     * Calculates the area of a circle.
+     *
+     * @param radius the radius of the circle
+     * @return the area of the circle as a double
+     * @throws IllegalArgumentException if the radius is not positive
+     */
+    public static double area(double radius) {
+        if (radius <= 0) {
+            throw new IllegalArgumentException("Radius must be a positive number.");
+        }
+        return Math.PI * radius * radius;
+    }
+
+    /**
+     * Calculates the area of a rectangle.
+     *
+     * @param width  the width of the rectangle
+     * @param height the height of the rectangle
+     * @return the area of the rectangle as a double
+     * @throws IllegalArgumentException if width or height is not positive
+     */
+    public static double area(double width, double height) {
+        if (width <= 0 || height <= 0) {
+            throw new IllegalArgumentException("Width and height must be positive numbers.");
+        }
+        return width * height;
+    }
+
+    /**
+     * Calculates the area of a triangle.
+     *
+     * @param base   the base of the triangle
+     * @param height the height of the triangle
+     * @return the area of the triangle as a double
+     * @throws IllegalArgumentException if base or height is not positive
+     */
+    public static double area(int base, int height) {
+        if (base <= 0 || height <= 0) {
+            throw new IllegalArgumentException("Base and height must be positive numbers.");
+        }
+        return 0.5 * base * height;
+    }
+
+    /**
+     * Calculates the area of a square.
+     *
+     * @param side the side length of the square
+     * @return the area of the square as a double
+     * @throws IllegalArgumentException if the side length is not positive
+     */
+    public static double area(int side) {
+        if (side <= 0) {
+            throw new IllegalArgumentException("Side length must be a positive number.");
+        }
+        return (double) side * side;
+    }
+}
+
