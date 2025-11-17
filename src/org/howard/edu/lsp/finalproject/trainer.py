@@ -69,8 +69,8 @@ def load_and_preprocess_data(data_path):
     print(f"--- Loading data from {data_path} ---")
     
     # Find all EDF files in the data path
-    psg_files = sorted(glob.glob(os.path.join(data_path, "SC*PSG.edf")))
-    ann_files = sorted(glob.glob(os.path.join(data_path, "SC*Hypnogram.edf")))
+    psg_files = sorted(tf.io.gfile.glob(os.path.join(data_path, "SC*PSG.edf")))
+    ann_files = sorted(tf.io.gfile.glob(os.path.join(data_path, "SC*Hypnogram.edf")))
 
     if not psg_files or not ann_files:
         raise FileNotFoundError(f"No EDF files found in {data_path}. "
