@@ -1,6 +1,4 @@
-# Use a standard Python 3.10 base image
-FROM python:3.10-slim
-
+FROM tensorflow/tensorflow:2.16.1-gpu
 # Set the working directory inside the container
 WORKDIR /app
 
